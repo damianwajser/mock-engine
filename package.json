@@ -1,7 +1,7 @@
 {
-  "name": "wajser-mock",
-  "version": "0.1.0",
-  "description": "A simple mock",
+  "name": "node-js-getting-started",
+  "version": "0.3.0",
+  "description": "A sample Node.js app using Express 4",
   "engines": {
     "node": "10.x"
   },
@@ -18,5 +18,14 @@
     "request": "^2.81.0",
     "tape": "^4.7.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "license": "MIT"
 }
