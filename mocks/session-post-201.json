@@ -1,0 +1,8 @@
+{
+    "path":"session",
+    "response": {
+        "sesn":"ok"
+    },
+    "status": 201,
+    "method": "POST"
+}
