@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-var mocks = require('./mocks');
+var mocks = require('./services/MockConfigurer');
 
 var app = express();
 
@@ -12,4 +12,3 @@ app.use(express.static(path.join(__dirname, 'public')))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
-

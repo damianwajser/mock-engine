@@ -1,0 +1,8 @@
+{
+    "path":"session",
+    "response": {
+        "sesn":"ok, put"
+    },
+    "status": 202,
+    "method": "PUT"
+}
