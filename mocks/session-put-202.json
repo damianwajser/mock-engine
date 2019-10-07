@@ -1,7 +1,8 @@
 {
     "path":"session",
     "response": {
-        "sesn":"ok, put"
+        "sesn":"ok, put",
+        "mjs": "qsweqw"
     },
     "status": 202,
     "method": "PUT"
