@@ -1,18 +1,18 @@
 const Sequelize = require('sequelize')
-const UserModel = require('../models/UserModel')
+const EndpointModel = require('../models/EndpointModel')
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: '/Users/damianwajser/git/node-js-getting-started/testData/data.sqlite'
 })
 
-const User = UserModel(sequelize, Sequelize)
+const Endpoint = EndpointModel(sequelize, Sequelize)
 
-sequelize.sync({ force: false })
+sequelize.sync({ force: true })
   .then(() => {
     console.log(`Database & tables created!`)
   })
 
 module.exports = {
-  User
+  Endpoint
 }

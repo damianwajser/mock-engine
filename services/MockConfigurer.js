@@ -1,9 +1,12 @@
 const express = require('express')
+const fs = require('fs');
+const {Endpoint} = require('../config/sequelize');
 let router = express.Router();
 let mockService = require("./MockService.js");
 
 const testFolder = './mocks/';
-const fs = require('fs');
+
+express().on('listening', ()=> init());
 
 function getConfigFiles(){
   return fs.readdirSync(testFolder)
@@ -15,6 +18,10 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 
-getConfigFiles().forEach(c => mockService.createPath(router, c));
+async function init(){
+  let a = await Endpoint.findAll();
+  console.log("enpoints",a);
+  getConfigFiles().concat(a).forEach(c => mockService.createPath(router, c));
+}
 
 module.exports = router;
